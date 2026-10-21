@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safari Lux | Premium Transport & Chauffeur Services</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables for Branding */
+        :root {
+            --brand-green: #1B4332; /* Deep Forest Green */
+            --brand-light-green: #2D6A4F;
+            --brand-yellow: #FACC15; /* Golden Yellow */
+            --brand-yellow-hover: #EAB308;
+            --bg-light: #F8F9FA;
+            --text-dark: #333333;
+            --text-light: #FFFFFF;
+            --text-muted: #6C757D;
+            --whatsapp: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, .brand-font {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* --- TOP BAR --- */
+        .top-bar {
+            background-color: var(--brand-green);
+            color: var(--text-light);
+            padding: 8px 5%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .top-bar span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-bar i {
+            color: var(--brand-yellow);
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            background-color: #ffffff;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--brand-green);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--brand-yellow);
+            -webkit-text-stroke: 1px var(--brand-green);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--brand-green);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--brand-yellow-hover);
+        }
+
+        .nav-btn {
+            background-color: var(--brand-yellow);
+            color: var(--brand-green) !important;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 700 !important;
+            transition: background-color 0.2s;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--brand-yellow-hover);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(27, 67, 50, 0.85), rgba(27, 67, 50, 0.95)), url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            padding: 120px 5%;
+            text-align: center;
+            color: var(--text-light);
+            border-bottom: 6px solid var(--brand-yellow);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 25px;
+            color: var(--brand-yellow);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* --- WHATSAPP BUTTONS --- */
+        .whatsapp-actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px; /* Sharp corners for professional look */
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp);
+            color: white;
+            border: 2px solid var(--whatsapp);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: transparent;
+            color: var(--whatsapp);
+        }
+
+        .btn-whatsapp-outline {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+        }
+
+        .btn-whatsapp-outline:hover {
+            background-color: var(--text-light);
+            color: var(--brand-green);
+        }
+
+        .btn i {
+            font-size: 1.2rem;
+        }
+
+        /* --- SERVICES SECTION --- */
+        .section-container {
+            padding: 80px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--brand-green);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section-header .divider {
+            height: 4px;
+            width: 60px;
+            background-color: var(--brand-yellow);
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            border: 1px solid #E5E7EB;
+            border-top: 4px solid var(--brand-green);
+            padding: 40px 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-top-color 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            border-top-color: var(--brand-yellow);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--brand-green);
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            color: var(--brand-yellow-hover);
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            color: var(--brand-green);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* --- TRUST BANNER --- */
+        .trust-banner {
+            background-color: var(--brand-yellow);
+            padding: 25px 5%;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            border-top: 1px solid #EAB308;
+            border-bottom: 1px solid #EAB308;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--brand-green);
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--brand-green);
+            color: var(--text-light);
+            padding: 60px 5% 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: var(--brand-yellow);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            color: #A8B2D1;
+            font-size: 0.9rem;
+        }
+
+        .footer-contact h4 {
+            color: var(--brand-yellow);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-contact i {
+            color: var(--brand-yellow);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #A8B2D1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .top-bar { display: none; }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero h2 { font-size: 1.2rem; }
+            .btn { width: 100%; }
+            .trust-banner { flex-direction: column; gap: 15px; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span><i class="fas fa-map-marker-alt"></i> Any County You Are In</span>
+        <span><i class="fas fa-shield-alt"></i> Travel in Comfort, Style & Safety</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Safari <span>Lux</span></div>
+        <div class="nav-links">
+            <a href="#services">Our Services</a>
+            <a href="#about">Why Choose Us</a>
+            <a href="https://wa.me/254799463887?text=Hello%20Safari%20Lux,%20I%20would%20like%20to%20inquire%20about%20a%20booking." target="_blank" class="nav-btn">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Transport & Chauffeur Services</h1>
+            <h2>"Your Journey • Our Priority"</h2>
+            <p>Experience premium, reliable, and punctual transport solutions for airport transfers, safaris, weddings, and corporate events.</p>
+            
+            <div class="whatsapp-actions">
+                <!-- Contact 1 -->
+                <a href="https://wa.me/254799463887?text=Hello%20Safari%20Lux,%20I%20would%20like%20to%20book%20a%20service." target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Chat: 0799 463 887
+                </a>
+                <!-- Contact 2 -->
+                <a href="https://wa.me/254702391672?text=Hello%20Safari%20Lux,%20I%20would%20like%20to%20book%20a%20service." target="_blank" class="btn btn-whatsapp-outline">
+                    <i class="fab fa-whatsapp"></i> Chat: 0702 391 672
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="section-container" id="services">
+        <div class="section-header">
+            <h2>Our Premium Services</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-car-side service-icon"></i>
+                <h3>Transport Services</h3>
+                <p>From short trips to long journeys, we've got you covered with our fleet of luxury vehicles.</p>
+            </div>
+            
+            <div class="service-card">
+                <i class="fas fa-plane-departure service-icon"></i>
+                <h3>Airport Transfers</h3>
+                <p>On time, every time. Hassle-free airport pickups and drop-offs with professional drivers.</p>
+            </div>
+            
+            <div class="service-card">
+                <i class="fas fa-mountain service-icon"></i>
+                <h3>Adventures</h3>
+                <p>Explore amazing destinations and create unforgettable memories with our safari-ready rides.</p>
+            </div>
+            
+            <div class="service-card">
+                <i class="fas fa-ring service-icon"></i>
+                <h3>Weddings Convoy</h3>
+                <p>Make your special day even more grand with our elegant, synchronized convoy services.</p>
+            </div>
+            
+            <div class="service-card">
+                <i class="fas fa-user-tie service-icon"></i>
+                <h3>Sharp Boys Convoy</h3>
+                <p>Arrive in style and make an impression at your next high-profile event or night out.</p>
+            </div>
+            
+            <div class="service-card">
+                <i class="fas fa-umbrella-beach service-icon"></i>
+                <h3>Vacation</h3>
+                <p>Relax, explore and enjoy your dream getaway while we handle the driving and navigation.</p>
+            </div>
+            
+            <div class="service-card">
+                <i class="fas fa-truck-moving service-icon"></i>
+                <h3>Relocation</h3>
+                <p>Moving you and your belongings safely, efficiently, and securely to your new destination.</p>
+            </div>
+            
+            <div class="service-card">
+                <i class="fas fa-glass-cheers service-icon"></i>
+                <h3>All Ceremonies</h3>
+                <p>Birthdays, graduations, corporate events and more. We get you there in style and comfort.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Banner -->
+    <div class="trust-banner">
+        <div class="trust-item"><i class="fas fa-shield-check"></i> Safe & Reliable</div>
+        <div class="trust-item"><i class="fas fa-clock"></i> Punctual Service</div>
+        <div class="trust-item"><i class="fas fa-gem"></i> Luxury Vehicles</div>
+        <div class="trust-item"><i class="fas fa-user-shield"></i> Professional Drivers</div>
+        <div class="trust-item"><i class="fas fa-thumbs-up"></i> Affordable Rates</div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>SAFARI LUX</h3>
+                <p>Premium transport and chauffeur services dedicated to providing you with comfort, style, and safety on every journey.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>For Arrangements</h4>
+                <p><i class="fas fa-phone-alt"></i> Call: 0799 463 887</p>
+                <p><i class="fas fa-phone-alt"></i> Call: 0702 391 672</p>
+            </div>
+            <div class="footer-contact">
+                <h4>WhatsApp Us</h4>
+                <p><a href="https://wa.me/254799463887" style="color: var(--text-light); text-decoration: none;"><i class="fab fa-whatsapp" style="color: var(--whatsapp);"></i> 0799 463 887</a></p>
+                <p><a href="https://wa.me/254702391672" style="color: var(--text-light); text-decoration: none;"><i class="fab fa-whatsapp" style="color: var(--whatsapp);"></i> 0702 391 672</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 Safari Lux Transport & Chauffeur Services. Your Destination • Our Commitment.
+        </div>
+    </footer>
+
+</body>
+</html>
